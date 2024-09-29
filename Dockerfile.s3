@@ -5,24 +5,11 @@ FROM eclipse-temurin:17-jdk
 LABEL maintainer="siddharth.gupta26@gmail.com"
 
 # Create a directory for the application
-RUN mkdir /password_file
-
-# Set the working directory
-WORKDIR /password_file
-
-COPY aws_password.sh /password_file/
-RUN chmod +x aws_password.sh
-
-WORKDIR ..
-
-# Create a directory for the application
 RUN mkdir /s3-object-browser
 
 
 # Set the working directory
 WORKDIR /s3-object-browser
-
-# COPY aws_password.sh /s3-object-browser/
 
 
 # Install git and other necessary tools for building the project
