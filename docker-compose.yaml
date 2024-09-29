@@ -1,0 +1,26 @@
+version: '3'
+services:
+  oidc-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.OIDC  # Specify the Dockerfile name
+    # image: oidc-server
+   
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "9000:9000"
+
+  s3-object-browser:
+    build:
+      context: .
+      dockerfile: Dockerfile.s3  # Specify the Dockerfile name
+    # image: s3-object-browser
+    env_file:
+      - aws.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oidc-server

@@ -1,0 +1,42 @@
+# Use the Eclipse Temurin base image (OpenJDK 17), which has better multi-platform support
+FROM eclipse-temurin:17-jdk
+
+# Maintainer of the image
+LABEL maintainer="siddharth.gupta26@gmail.com"
+
+# Create a directory for the application
+RUN mkdir /password_file
+
+# Set the working directory
+WORKDIR /password_file
+
+COPY aws_password.sh /password_file/
+RUN chmod +x aws_password.sh
+
+WORKDIR ..
+
+# Create a directory for the application
+RUN mkdir /s3-object-browser
+
+
+# Set the working directory
+WORKDIR /s3-object-browser
+
+# COPY aws_password.sh /s3-object-browser/
+
+
+# Install git and other necessary tools for building the project
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
+# Clone the repository
+RUN git clone https://github.com/sgupta401/s3-object-browser.git .
+
+# Build the application using Maven (Gradle alternative can be added if necessary)
+RUN ./mvnw clean package -DskipTests
+ENV SPRING_PROFILES_ACTIVE=prod
+
+# Expose the application port
+EXPOSE 8080
+
+# Run the Spring Boot application
+ENTRYPOINT ["java", "-jar", "/s3-object-browser/target/s3-object-browser-0.0.1-SNAPSHOT.jar"]
