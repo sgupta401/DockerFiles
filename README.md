@@ -13,6 +13,13 @@
 2. **Run the following command:**
    ```bash
    docker-compose up
+
+   Above command build the images from two docker files
+   1. OIDC Server: https://github.com/sgupta401/DockerFiles/blob/main/Dockerfile.OIDC
+   2. s3-object-browser: https://github.com/sgupta401/DockerFiles/blob/main/Dockerfile.s3
+
+   Both docker files are based on eclipse-temurin:17-jdk base image, and pull the code from the git hub repositories. THe jars are then built using maven and the containers are started on ports 8080 and 9000
+   
 3. **Two Docker containers will be started:**
    - **Container 1:** Runs the `s3-object-browser` Spring Boot app, which can be accessed at [http://localhost:8080/](http://localhost:8080/).
    - **Container 2:** Runs the `oidc-server` Spring Boot app, which can be accessed at [http://localhost:9000/](http://localhost:9000/).
