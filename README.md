@@ -8,7 +8,9 @@
 
 1. **Start Docker Desktop.**
 
-   ![Docker Desktop](https://github.com/user-attachments/assets/786b4f2f-b859-4ce2-b12f-128f19c8f02d)
+   <img width="399" alt="image" src="https://github.com/user-attachments/assets/4d4ee55a-976a-46ed-9b57-33546808192b">
+
+   Once the docker desktop is started, the menu bar shows docker icon, as shown in above image, (left most icon is the docker icon)
 
 2. Clone the repository
    ```bash
