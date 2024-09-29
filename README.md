@@ -10,7 +10,16 @@
 
    ![Docker Desktop](https://github.com/user-attachments/assets/786b4f2f-b859-4ce2-b12f-128f19c8f02d)
 
-2. **Run the following command:**
+2. Clone the repository
+   ```bash
+   git clone https://github.com/sgupta401/DockerFiles.git
+3. Open command prompt and go to root folder of the cloned repository `DockerFiles`
+4. Run `ls` command and confirm the following files
+      -  Dockerfile.OIDC
+      -  Dockerfile.s3
+      -  aws.env
+      -  docker-compose.yaml
+6. **Run the following command from the folder`DockerFiles` :**
    ```bash
    docker-compose up
    ```
@@ -23,9 +32,8 @@
    2. oidc server: 9000
    
 3. **Two Docker containers will be started:**
-   - **Container 1:** Runs the `s3-object-browser` Spring Boot app, which can be accessed at [http://localhost:8080/](http://localhost:8080/).
-   - **Container 2:** Runs the `oidc-server` Spring Boot app, which can be accessed at [http://localhost:9000/](http://localhost:9000/).
-
+   - **Container 1:** Runs the `s3-object-browser` Spring Boot app, which can be accessed at localhost:8080. Test if the server started successfully by navigating to url [http://localhost:8080/health](http://localhost:8080/health)
+   - **Container 2:** Runs the `oidc-server` Spring Boot app, which can be accessed at localhost:9000. Test if the server started successfully by navigating to url [http://localhost:9000/oauth2/jwks](http://localhost:9000/oauth2/jwks)
 ## How to test the application 
 ### /object_metadata/file1.txt endpoint
 1. Enter the url http://localhost:8080/object_metadata/file1.txt in browser
