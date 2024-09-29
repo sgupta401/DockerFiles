@@ -56,9 +56,7 @@
 
 ### /health endpoint
 1. Enter url http://localhost:8080/health in browser
-2. If user is logged in, then audit details will be shown to user
-3. If user is not logged in then page will be redirected to login page
-4. Enter test user credentials given above and continue
+
 
 ## Sample Response and screenshot
 1. `/object_metadata/file1.txt`
