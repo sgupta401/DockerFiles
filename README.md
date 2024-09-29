@@ -41,7 +41,15 @@
 3. If user is not logged in then page will be redirected to login page
 4. Enter test user credentials given above and continue
 
-
+## Test Data 
+### Users 
+    -     sgupta1/password
+    -     sgupta2/password
+    -     sgupta3/password
+### Files 
+    -     file1.txt (http://localhost:8080/object_metadata/file1.txt) 
+    -     file2.txt (http://localhost:8080/object_metadata/file2.txt)
+    -     file3.txt (http://localhost:8080/object_metadata/file3.txt)
 
 ## Running the application on IntelliJ
 1. Clone OIDC Server repository
