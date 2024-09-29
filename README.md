@@ -1,4 +1,4 @@
-## How to run the applications
+## How to run the applications Using Docker 
 
 **System requirement**
 1. Docker (Tested on Version - 27.1.1, build 6312585)
