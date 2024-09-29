@@ -1,8 +1,9 @@
 ## How to run the applications Using Docker 
 
 **System requirement**
-1. Docker (Tested on Version - 27.1.1, build 6312585)
-2. Docker Compose (Already installed in Docker desktop is installed) (Tested on version v2.29.1-desktop.1)  
+1. Mac (Supports both M1 and intel chip as `eclipse-temurin:17-jdk` base image is used, which has images for both ARM and AMD/Intel based architectures. Not tested on windows machine but it should work if it has ARM and AMD/Intel based architecture)
+2. Docker (Tested on Version - 27.1.1, build 6312585)
+3. Docker Compose (Already installed in Docker desktop is installed) (Tested on version v2.29.1-desktop.1)  
 
 ## Steps
 
