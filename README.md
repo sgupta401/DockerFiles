@@ -1,8 +1,8 @@
 ## How to run the applications
 
 **System requirement**
-1. Docker (Version - 27.1.1, build 6312585)
-2. Docker Compose (Already installed in Docker desktop is installed) (version v2.29.1-desktop.1)  
+1. Docker (Tested on Version - 27.1.1, build 6312585)
+2. Docker Compose (Already installed in Docker desktop is installed) (Tested on version v2.29.1-desktop.1)  
 
 ## Steps
 
@@ -40,5 +40,23 @@
 2. If user is logged in, then audit details will be shown to user
 3. If user is not logged in then page will be redirected to login page
 4. Enter test user credentials given above and continue
+
+
+
+## Running the application on IntelliJ
+1. Clone OIDC Server repository
+   ```bash
+   git clone https://github.com/sgupta401/OIDC-Server.git
+2. Clone s3-object-browser repository
+   ```bash
+   git clone https://github.com/sgupta401/s3-object-browser.git
+3. Import both projects in IntelliJ as maven projects
+4. Start OIDC server by running `com.intuit.oidc.Application` class
+
+   <img width="400" alt="image" src="https://github.com/user-attachments/assets/f8161b1e-1f79-406f-81b2-003bd8b566fd">
+
+5. Start s3-object-browser by running `com.intuit.S3ObjectBrowserApplication` class
+
+   <img width="400" alt="image" src="https://github.com/user-attachments/assets/1276cf18-7a23-4d78-9629-e0ff20e382e7">
 
    
