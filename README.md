@@ -38,7 +38,7 @@
    - **Container 1:** Runs the `s3-object-browser` Spring Boot app, which can be accessed at localhost:8080. Test if the server started successfully by navigating to url [http://localhost:8080/health](http://localhost:8080/health)
    - **Container 2:** Runs the `oidc-server` Spring Boot app, which can be accessed at localhost:9000. Test if the server started successfully by navigating to url [http://localhost:9000/oauth2/jwks](http://localhost:9000/oauth2/jwks)
 ## How to test the application 
-### /object_metadata/file1.txt endpoint
+### http://localhost:8080/object_metadata/file1.txt 
 1. Enter the url http://localhost:8080/object_metadata/file1.txt in browser
 2. Page will be redirected to http://localhost:9000/oauth2/authorization endpoint
 3. Enter test user credentials
@@ -49,15 +49,20 @@
 5. Page will be redirected to consent page. Accept consent and click submit button
 6. Page will be redirected to http://localhost:8080/object_metadata/file1.txt with file1.txt metadata
 
-### /audit_log endpoint
+### http://localhost:8080/audit_log 
 1. Enter url http://localhost:8080/audit_log in browser
 2. If user is logged in, then audit details will be shown to user
 3. If user is not logged in then page will be redirected to login page
 4. Enter test user credentials given above and continue
 
-### /health endpoint
+### http://localhost:8080/health 
 1. Enter url http://localhost:8080/health in browser
 
+### http://localhost:8080/logout 
+1. Enter url http://localhost:8080/logout in browser
+2. User is redirected to OIDC server logout page
+3. Click on confirm logout button
+4. User is logged out of s3-object-browser and OIDC server. 
 
 ## Sample Response and screenshot
 1. `/object_metadata/file1.txt`
